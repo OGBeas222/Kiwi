@@ -1,2 +1,39 @@
+html,body {
+	color: $black;
+	background-color: $white;
+	font-size: 10px;
+	line-height: 150%;
+	@extend %bebasneue-700;
+}
 
+.container {
+	max-width: 120rem;
+	padding: 0 1rem;
+	margin: 0 auto;
+	&--small{
+		max-width: 81.5rem;
+		padding: 0;
+	}
+}
 
+.logo{
+	&-wrap{
+		height: 10rem;
+		width: 19.1rem;
+	}
+	&-link{
+		margin-right: 10rem;
+	}
+}
+
+.hover-btn{
+	transition: all .3s linear .50ms;
+	&:hover{
+		background-color: rgba(1, 163, 164, 0.79);
+	}
+}
+
+.green-line{
+	width: 48px;
+	height: 5px;
+}

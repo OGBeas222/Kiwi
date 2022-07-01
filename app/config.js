@@ -16,19 +16,19 @@ module.exports = {
 	},
 
 	build: {
-		imagemin: [ 'png', 'jpg', 'svg', 'gif' ],
-		sourcemaps: [ 'js', 'css' ],
-		autoprefixer: [ 'last 3 versions', 'ie 10', 'ie 11' ],
+		imagemin: ['png', 'jpg', 'svg', 'gif'],
+		sourcemaps: ['js', 'css'],
+		autoprefixer: ['last 3 versions', 'ie 10', 'ie 11'],
 		mainBundle: 'app', // название основного бандла проекта
 		mainLevel: 'develop',
 		globalStyles:
 			[
-			'app/blocks/develop/app/style/_vars.scss',
-			'app/blocks/develop/app/style/_reset.scss',
-			'app/blocks/develop/app/style/_global.scss',
-			'app/blocks/develop/app/style/_fonts.scss'
+				'app/blocks/develop/app/style/_vars.scss',
+				'app/blocks/develop/app/style/_reset.scss',
+				'app/blocks/develop/app/style/_global.scss',
+				'app/blocks/develop/app/style/_fonts.scss',
+				'app/blocks/develop/app/style/_media.scss'
 			],
-		BEML: true,
 		pugMap: false,
 		addVersions: true,
 		HTMLRoot: './',
@@ -36,13 +36,13 @@ module.exports = {
 
 	autoCreate: {
 		onlyOnWatch: true,
-		// folders: [ 'img', 'assets' ],
-		// files: [ '.scss', '.js' ],
-		// levels: [ 'common' ],
-		ignoreStyle: [ /[a-z\d](_|--)[a-z\d]/i ], // игнорируем модификаторы при создании стилей
-		ignoreScript: [ /[a-z\d](_|--)[a-z\d]/i  ], // игнорируем модификаторы при создании скриптов
-		ignoreTemplate: ['develop'], // по аналогии можно указать и для шаблонов
-		ignoreNodes: [ /__[\w]/i ],
+		folders: ['assets'],
+		files: ['.scss', '.js'],
+		levels: ['common'],
+		ignoreStyle: [/[a-z\d](__|--|-)[a-z\d]/i], // игнорируем модификаторы при создании стилей
+		ignoreScript: [/[a-z\d](__|--|-)[a-z\d]/i], // игнорируем модификаторы при создании скриптов
+		ignoreTemplate: ['common'], // по аналогии можно указать и для шаблонов
+		ignoreNodes: [/__[\w]/i],
 	},
 
 	dist: {
@@ -77,11 +77,11 @@ module.exports = {
 		max_preserve_newlines: 2, // максимальное кол-во пустых строк подряд
 		inline: [], // список строчных тегов (по умолчанию по стандарту w3c)
 		unformatted: [], // список тегов, которые не нужно форматировать (по умолчанию inline)
-		content_unformatted: [ 'pre', 'textarea' ], // список тегов, у которых не нужно форматировать содержимое
+		content_unformatted: ['pre', 'textarea'], // список тегов, у которых не нужно форматировать содержимое
 	},
 
 	fastMake: {
-		b: ['.js','.scss','.html','img']
+		b: ['.js', '.scss', '.html', 'img']
 	},
 
 	optimization: {
@@ -105,9 +105,9 @@ module.exports = {
 
 		// Для svg нужно указать массив c настройками!
 		svg: [
-			{ cleanupIDs: false },
-			{ removeViewBox: false },
-			{ mergePaths: false },
+			{cleanupIDs: false},
+			{removeViewBox: false},
+			{mergePaths: false},
 		],
 
 		// Тут можно указать названия (без расширения), которые не нужно оптимизировать

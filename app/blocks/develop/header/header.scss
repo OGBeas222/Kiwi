@@ -1,6 +1,115 @@
 .header{
 	&-top{
 		background-color: $white;
-		padding: 20px 0;
+		padding: 2rem 0;
+		&__menu{
+			display: flex;
+			align-items: center;
+			&:not(:last-child){
+				margin-right: 10rem;
+			}
+			&-dropdown{
+				position: relative;
+			}
+			&-btn{
+				border: none;
+				padding: .5rem 1rem;
+				color: $black;
+				background-color: transparent;
+				cursor: pointer;
+				transition: background-color 0.3s ease-in-out;
+			}
+			&-inner{
+				display: flex;
+				align-items: center;
+			}
+			&-elem{
+				&:not(:last-child){
+					margin-right: 10rem;
+				}
+			}
+			&-btn{
+				font-size: 2.4rem;
+				text-transform: uppercase;
+				& > * {
+					color: $black;
+					text-transform: uppercase;
+					font-size: 2.4rem;
+					line-height: 2.4rem;
+					@extend %bebasneue-700;
+				}
+				&--active{
+					position: relative;
+					& > * {
+						color: $green-600;
+					}
+					&::before{
+						content: '';
+						position: absolute;
+						left: .6rem;
+						bottom: -.8rem;
+						background-color: $green-600;
+						height: .4rem;
+						width: 5.2rem;
+					}
+				}
+			}
+			&-link{
+				& > * {
+					color: $black;
+					text-transform: uppercase;
+					font-size: 2.4rem;
+					line-height: 2.4rem;
+					@extend %bebasneue-700;
+				}
+			}
+		}
 	}
+	&-bottom{
+		width: 100%;
+		height: calc(100vh - 140px);
+		&__bg{
+			& > * {
+				object-fit: cover;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+
+//drop-dowm
+
+.header{
+	&__dropdown{
+		position: absolute;
+		background-color: $white;
+		top: 5.5rem;
+		left: 0;
+		width: 18rem;
+		overflow: hidden;
+		opacity: 0;
+		&-item{
+			padding: 3rem 2rem;
+		}
+		&-link{
+			& > * {
+				color: $black;
+				text-transform: uppercase;
+				font-size: 2.4rem;
+				line-height: 2.4rem;
+				@extend %bebasneue-700;
+			}
+		}
+		&--active{
+			overflow: visible;
+			opacity: 1;
+		}
+		&-green{
+			background-color: $green-100;
+		}
+	}
+
 }
