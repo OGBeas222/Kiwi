@@ -5,8 +5,7 @@
 //
 // 	modules: [
 // 		{
-// 			// from:'',
-// 			import: 'media.scss'
+// 			import: '_media.scss'
 // 		}
 // 	],
 //

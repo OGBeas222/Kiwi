@@ -23,11 +23,8 @@ module.exports = {
 		mainLevel: 'develop',
 		globalStyles:
 			[
-				'app/blocks/develop/app/style/_vars.scss',
-				'app/blocks/develop/app/style/_reset.scss',
-				'app/blocks/develop/app/style/_global.scss',
-				'app/blocks/develop/app/style/_fonts.scss',
-				'app/blocks/develop/app/style/_media.scss'
+				'app/blocks/_global.scss',
+				'app/blocks/_media.scss',
 			],
 		pugMap: false,
 		addVersions: true,
